@@ -1,0 +1,41 @@
+.home{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr ;
+gap: 6px;
+margin: 6px;
+
+}
+.header{
+margin: 6px;
+font-size: 40px;
+}
+/* .Free-lancer{
+    background-image: url('.././media/logo_freelancer.png') ;
+} */
+/* .personal{
+    background-image: url('.././media/id-pass-profile-icon--icon-search-engine-0.png') ;
+} */
+/* .organization
+{
+    background-image: url('.././media/organization.png') ;
+} */
+.cardhome{
+    color: gold;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    /* height: 40vh; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+}
+.title{
+    background-color: gray;
+    border-radius: 9px;
+
+}
+.imgehome{
+    height: 40vh;
+    width: 33vw;
+}
