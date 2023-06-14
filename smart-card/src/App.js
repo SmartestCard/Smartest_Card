@@ -9,6 +9,12 @@ function App() {
     <Routes>
    <Route path='/personal' element={<Personal />}></Route>
     <Route path="/" element={<Home />} />
+    <Route
+          path="*"
+          element={
+            <h1> 404 NOT FOUND: The page you are looking for doesn't exist </h1>
+          }
+        />
 </Routes>
     </>
   );
