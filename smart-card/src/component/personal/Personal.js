@@ -14,7 +14,60 @@ export default class Personal extends Component {
     constructor(){
         super()
         this.state={linkedin :'',facebook:'',twitter:'',instagram:'',phone:'',name:''}
+
+        this.linkedin=this.linkedin.bind(this)
+        this.name=this.name.bind(this)
+        this.facebook=this.facebook.bind(this)
+        this.twitter=this.twitter.bind(this)
+        this.instagram=this.instagram.bind(this)
+        this.phone=this.phone.bind(this)
     }
+    linkedin(e){
+      this.setState(()=>{
+return{linkedin: e.target.value}
+      })
+   
+    } 
+    facebook(e){
+      this.setState(()=>{
+return{facebook: e.target.value}
+      })
+
+    } 
+    twitter (e){
+      this.setState(()=>{
+return{twitter: e.target.value}
+      })
+
+    } 
+    instagram(e){
+      this.setState(()=>{
+return{instagram: e.target.value}
+      })
+
+    } 
+    phone (e){
+      this.setState(()=>{
+return{phone: e.target.value}
+      })
+
+    } 
+    name (e){
+      this.setState(()=>{
+return{name: e.target.value}
+      })
+    } 
+    handleSave = () => {
+      const info = {
+        linkedin: this.state.linkedin,
+        facebook: this.state.facebook,
+        twitter: this.state.twitter,
+        instagram: this.state.instagram,
+        phone: this.state.phone,
+        name: this.state.name
+      };
+      console.log(info);
+    };
   render() {
     return (
       <>
@@ -23,25 +76,17 @@ export default class Personal extends Component {
 
 <MDBCol col='6' className="mb-5">
   <div className="d-flex flex-column ms-5">
-
-    <div className="text-center">
-      <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
-        style={{width: '185px'}} alt="logo" />
-      <h4 className="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
-    </div>
-
-    <p>Please login to your account</p>
        <MDBValidation className='row g-3'>
 <div className='inputfiled'>
 <MDBIcon
                     fas
                     icon="user-alt me-3"
                     size="xlg"
-                    style={{ color: "#223d66",}}
+                    style={{ color: "#1F1E57",}}
                   />
       <MDBValidationItem className='col-md-4'>
         <MDBInput
-          // onChange={}
+          onChange={this.name}
           id='validationCustom01'
           required
           label='Name'
@@ -53,14 +98,14 @@ export default class Personal extends Component {
                     fab
                     icon="linkedin me-3"
                     size="xlg"
-                    style={{ color: "#223d66",}}
+                    style={{ color: "#1F1E57",}}
                   />
 
 
       <MDBValidationItem className='col-md-4'>
         
         <MDBInput
-          // onChange={}
+          onChange={this.linkedin}
           id='validationCustom01'
           required
           label='linkedin'
@@ -73,13 +118,13 @@ export default class Personal extends Component {
                     fab
                     icon="facebook me-3"
                     size="xlg"
-                    style={{ color: "#223d66",}}
+                    style={{ color: "#1F1E57",}}
                   />
 
       <MDBValidationItem className='col-md-4'>
         <MDBInput
           name='fname'
-          // onChange={}
+          onChange={this.facebook}
           id='validationCustom01'
           required
           label='facebook'
@@ -90,12 +135,12 @@ export default class Personal extends Component {
                     fab
                     icon="twitter me-3"
                     size="xlg"
-                    style={{ color: "#223d66",}}
+                    style={{ color: "#1F1E57",}}
                   />
       <MDBValidationItem className='col-md-4'>
         <MDBInput
           name='fname'
-          // onChange={}
+          onChange={this.twitter}
           id='validationCustom01'
           required
           label='Twitter'
@@ -106,11 +151,11 @@ export default class Personal extends Component {
                     fab
                     icon="instagram me-3"
                     size="xlg"
-                    style={{ color: "#223d66",}}
+                    style={{ color: "#1F1E57",}}
                   />
       <MDBValidationItem className='col-md-4'>
         <MDBInput
-          // onChange={}
+          onChange={this.instagram}
           id='validationCustom01'
           required
           label='Instagram'
@@ -121,11 +166,11 @@ export default class Personal extends Component {
                     fab
                     icon="whatsapp me-3"
                     size="xlg"
-                    style={{ color: "#223d66",}}
+                    style={{ color: "#1F1E57",}}
                   />
       <MDBValidationItem className='col-md-4'>
         <MDBInput
-          // onChange={}
+          onChange={this.phone}
           id='validationCustom01'
           required
           label='Phone'
@@ -134,35 +179,16 @@ export default class Personal extends Component {
       </MDBValidation>
 
     <div className="text-center pt-1 mb-5 pb-1">
-      <MDBBtn className="mb-4 w-100 gradient-custom-2">Sign in</MDBBtn>
-      <a className="text-muted" href="#!">Forgot password?</a>
+      <br/>
+      <MDBBtn className="mb-4 w-100 gradient-custom-2 btnsave"style={{backgroundColor:'#1F1E57',
+    color:'#CBA552'}}onClick={this.handleSave}>Save</MDBBtn>
+     
     </div>
-
-    <div className="d-flex flex-row align-items-center justify-content-center pb-4 mb-4">
-      <p className="mb-0">Don't have an account?</p>
-      <MDBBtn outline className='mx-2' color='danger'>
-        Danger
-      </MDBBtn>
-    </div>
-
   </div>
 
 </MDBCol>
 
-<MDBCol col='6' className="mb-5">
-  <div className="d-flex flex-column  justify-content-center gradient-custom-2 h-100 mb-4">
 
-    <div className="text-white px-3 py-4 p-md-5 mx-md-4">
-      <h4 class="mb-4">We are more than just a company</h4>
-      <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
-    </div>
-
-  </div>
-
-</MDBCol>
 
 </MDBRow>
       </MDBContainer>
