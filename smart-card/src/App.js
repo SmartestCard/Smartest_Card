@@ -3,7 +3,7 @@ import Home from './component/Home/Home';
 import { Routes, Route, Link } from "react-router-dom";
 import Personal from './component/personal/Personal';
 import { createContext, useState } from 'react';
-import Result from '../result/Result';
+import Result from './component/result/Result';
 
 export const UserContext = createContext();
 function App() {
