@@ -1,0 +1,32 @@
+.home{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr ;
+gap: 6px;
+margin: 6px;
+
+}
+.header{
+margin: 6px;
+font-size: 40px;
+}
+
+.cardhome{
+    color:#CBA552;
+    text-align: center;
+    border: 1px solid #1F1E57;
+    border-radius: 10px;
+    /* height: 40vh; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.title{
+    background-color: #1F1E57;
+    border-radius: 8px;
+    border: 1px solid #CBA552;
+
+}
+.imgehome{
+    height: 40vh;
+    width: 33vw;
+}
